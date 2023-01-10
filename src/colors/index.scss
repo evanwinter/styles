@@ -1,0 +1,27 @@
+$colors: (
+  "black": rgb(33, 33, 33),
+  "black-75": rgba(33, 33, 33, 0.75),
+  "black-50": rgba(33, 33, 33, 0.5),
+  "black-25": rgba(33, 33, 33, 0.25),
+  "black-10": rgba(33, 33, 33, 0.1),
+  "white": rgb(247, 247, 247),
+  "white-75": rgba(247, 247, 247, 0.75),
+  "white-50": rgba(247, 247, 247, 0.5),
+  "white-25": rgba(247, 247, 247, 0.25),
+  "white-10": rgba(247, 247, 247, 0.1),
+);
+
+:root {
+  @each $key, $value in $colors {
+    --color-#{$key}: #{$value};
+  }
+}
+
+@each $key, $value in $colors {
+  .color-#{$key} {
+    color: $value;
+  }
+  .bg-#{$key} {
+    background-color: $value;
+  }
+}
