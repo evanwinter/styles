@@ -1,0 +1,26 @@
+$breakpoints: (
+  "xs": 20rem,
+  "sm": 30rem,
+  "md": 48rem,
+  "lg": 64rem,
+  "xl": 80rem,
+);
+
+:root {
+  @each $key, $value in $breakpoints {
+    --breakpoint-#{$key}: #{$value};
+  }
+}
+
+@each $key, $value in $breakpoints {
+  .mw-#{$key} {
+    width: 100%;
+    max-width: $value;
+  }
+}
+
+@mixin smaller-than($breakpoint) {
+  @media (max-width: map.get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
