@@ -12,13 +12,6 @@ $breakpoints: (
   }
 }
 
-@each $key, $value in $breakpoints {
-  .mw-#{$key} {
-    width: 100%;
-    max-width: $value;
-  }
-}
-
 @mixin smaller-than($breakpoint) {
   @media (max-width: map-get($breakpoints, $breakpoint)) {
     @content;
