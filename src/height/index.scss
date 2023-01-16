@@ -11,7 +11,7 @@ $heights: (
   "100vh": 100vh,
 );
 
-@each $key, $value in $breakpoints {
+@each $key, $value in $heights {
   .minh-#{$key} {
     min-height: 100vh;
   }
