@@ -1,0 +1,38 @@
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.relative {
+  position: relative;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.static {
+  position: static;
+}
+
+.inset-0 {
+  inset: 0;
+}
+
+@each $name, $value in $spacing {
+  .top-#{$name} {
+    top: $value;
+  }
+  .bottom-#{$name} {
+    bottom: $value;
+  }
+  .left-#{$name} {
+    left: $value;
+  }
+  .right-#{$name} {
+    right: $value;
+  }
+}
