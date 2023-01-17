@@ -13,11 +13,12 @@ $heights: (
 
 @each $key, $value in $heights {
   .minh-#{$key} {
-    min-height: 100vh;
+    height: auto;
+    min-height: $value;
   }
 
   .maxh-#{$key} {
-    height: 100vh;
+    height: auto;
     max-height: $value;
   }
 
