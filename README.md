@@ -379,7 +379,9 @@ A minimal CSS utility library Evan uses in his personal projects.
 | bold     | 700   |
 
 ```css
-.weight-{key} {
+--text-{key}: {value};
+
+.text-{key} {
   font-weight: {value};
 }
 ```
@@ -392,8 +394,18 @@ A minimal CSS utility library Evan uses in his personal projects.
 | large | 1.2em |
 
 ```css
+--text-{key}: {value};
+
 .text-{key} {
   font-size: {value};
+}
+```
+
+#### Decoration
+
+```css
+.underline {
+  text-decoration: underline;
 }
 ```
 
