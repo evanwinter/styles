@@ -1,31 +1,53 @@
-.text-center {
-  text-align: center;
+/* Alignment */
+
+$alignments: (
+  center: center,
+  left: left,
+  right: right,
+);
+
+@each $key, $value in $alignments {
+  .text-#{$key} {
+    text-align: $value;
+  }
 }
 
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
+/* Decoration */
 
 .underline {
   text-decoration: underline;
 }
 
-.font-bold {
-  font-weight: 700;
+/* Weight */
+
+$weights: (
+  light: 300,
+  normal: 400,
+  semibold: 600,
+  bold: 700,
+);
+
+@each $key, $value in $weights {
+  .text-#{$key} {
+    font-weight: $value;
+  }
 }
 
-.font-semibold {
-  font-weight: 600;
+/* Size */
+
+$sizes: (
+  small: 0.9em,
+  large: 1.2em,
+);
+
+:root {
+  @each $key, $value in $sizes {
+    --text-#{$key}: #{$value};
+  }
 }
 
-.font-normal {
-  font-weight: 400;
-}
-
-.font-light {
-  font-weight: 300;
+@each $key, $value in $sizes {
+  .text-#{$key} {
+    font-size: $value;
+  }
 }

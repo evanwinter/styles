@@ -1,11 +1,10 @@
 @each $key, $value in $breakpoints {
   .maxw-#{$key} {
-    width: 100%;
-    max-width: $value;
+    width: min(100%, $value);
   }
 
   .minw-#{$key} {
-    min-width: $value;
+    width: max(100%, $value);
   }
 
   .w-#{$key} {

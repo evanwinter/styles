@@ -1,21 +1,15 @@
-.absolute {
-  position: absolute;
-}
+$positions: (
+  absolute: absolute,
+  fixed: fixed,
+  relative: relative,
+  sticky: sticky,
+  static: static,
+);
 
-.fixed {
-  position: fixed;
-}
-
-.relative {
-  position: relative;
-}
-
-.sticky {
-  position: sticky;
-}
-
-.static {
-  position: static;
+@each $key, $value in $positions {
+  .#{$key} {
+    position: $value;
+  }
 }
 
 .inset-0 {

@@ -1,3 +1,12 @@
+$border-radii: (
+  "xxs": 0.125em,
+  "xs": 0.25em,
+  "sm": 0.5em,
+  "md": 1em,
+  "lg": 2em,
+  "full": 50%,
+);
+
 .border {
   border: 1px solid currentColor;
 }
@@ -6,27 +15,8 @@
   border-width: 2px solid currentColor;
 }
 
-.rounded-xxs {
-  border-radius: 0.125em;
-}
-
-.rounded-xs {
-  border-radius: 0.25em;
-}
-
-.rounded-sm {
-  border-radius: 0.5em;
-}
-
-.rounded-md,
-.rounded {
-  border-radius: 1em;
-}
-
-.rounded-lg {
-  border-radius: 2em;
-}
-
-.rounded-full {
-  border-radius: 50%;
+@each $key, $value in $border-radii {
+  .rounded-#{$key} {
+    border-radius: $value;
+  }
 }
