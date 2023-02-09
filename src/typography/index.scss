@@ -16,14 +16,6 @@ $text: (
   ),
 );
 
-@each $property, $values in $text {
-  @each $key, $value in $values {
-    .text-#{$key} {
-      text-#{$property}: $value;
-    }
-  }
-}
-
 $font: (
   size: (
     xxs: 0.6em,
@@ -42,8 +34,16 @@ $font: (
   ),
 );
 
+@each $property, $values in $text {
+  @each $key, $value in $values {
+    .text-#{$key} {
+      text-#{$property}: $value;
+    }
+  }
+}
+
 @each $property, $values in $font {
-  @each $key, $value in $property {
+  @each $key, $value in $values {
     .font-#{$key} {
       font-#{$property}: $value;
     }
