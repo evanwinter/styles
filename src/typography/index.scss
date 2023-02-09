@@ -42,10 +42,10 @@ $font: (
   ),
 );
 
-@each $key, $value in $font {
-  @each $key, $value in $value {
+@each $property, $values in $font {
+  @each $key, $value in $property {
     .font-#{$key} {
-      font-weight: $value;
+      font-#{$property}: $value;
     }
   }
 }
