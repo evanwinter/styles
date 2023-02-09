@@ -1,53 +1,50 @@
 /* Alignment */
 
-$alignments: (
-  center: center,
-  left: left,
-  right: right,
+$text: (
+  transform: (
+    uppercase: uppercase,
+    lowercase: lowercase,
+    capitalize: capitalize,
+  ),
+  align: (
+    center: center,
+    left: left,
+    right: right,
+  ),
+  decoration: (
+    underline: underline,
+  ),
 );
 
-@each $key, $value in $alignments {
-  .text-#{$key} {
-    text-align: $value;
+@each $property, $values in $text {
+  @each $key, $value in $values {
+    .text-#{$key} {
+      text-#{$property}: $value;
+    }
   }
 }
 
-/* Decoration */
-
-.underline {
-  text-decoration: underline;
-}
-
-/* Weight */
-
-$weights: (
-  light: 300,
-  normal: 400,
-  semibold: 600,
-  bold: 700,
+$font: (
+  size: (
+    xxs: 0.6em,
+    xs: 0.8em,
+    sm: 0.9em,
+    lg: 1.2em,
+    xl: 2em,
+    xxl: 3em,
+  ),
+  weight: (
+    light: 300,
+    normal: 400,
+    semibold: 600,
+    bold: 700,
+  ),
 );
 
-@each $key, $value in $weights {
-  .text-#{$key} {
-    font-weight: $value;
-  }
-}
-
-/* Size */
-
-$sizes: (
-  small: 0.9em,
-  large: 1.2em,
-);
-
-:root {
-  @each $key, $value in $sizes {
-    --text-#{$key}: #{$value};
-  }
-}
-
-@each $key, $value in $sizes {
-  .text-#{$key} {
-    font-size: $value;
+@each $key, $value in $font {
+  @each $key, $value in $value {
+    .font-#{$key} {
+      font-weight: $value;
+    }
   }
 }
