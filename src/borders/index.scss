@@ -17,7 +17,7 @@ $border-radii: (
 
 :root {
   @each $key, $value in $border-radii {
-    --rounded-#{$key}: $value;
+    --rounded-#{$key}: #{$value};
   }
 }
 
