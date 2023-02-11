@@ -15,6 +15,12 @@ $border-radii: (
   border-width: 2px solid currentColor;
 }
 
+:root {
+  @each $key, $value in $border-radii {
+    --rounded-#{$key}: $value;
+  }
+}
+
 @each $key, $value in $border-radii {
   .rounded-#{$key} {
     border-radius: $value;
