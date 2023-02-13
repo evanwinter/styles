@@ -1,5 +1,3 @@
-/* Alignment */
-
 $text: (
   transform: (
     uppercase: uppercase,
@@ -48,4 +46,11 @@ $font: (
       font-#{$property}: $value;
     }
   }
+}
+
+.underline {
+  text-decoration: underline;
+}
+.no-underline {
+  text-decoration: none;
 }

@@ -407,6 +407,9 @@ A minimal CSS utility library Evan uses in his personal projects.
 .underline {
   text-decoration: underline;
 }
+.no-underline {
+  text-decoration: none;
+}
 ```
 
 ### CSS Reset
