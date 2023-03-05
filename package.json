@@ -1,6 +1,6 @@
 {
   "name": "@evanwinter/styles",
-  "version": "1.1.14",
+  "version": "1.1.15",
   "description": "A minimal CSS utility library.",
   "main": "dist/index.css",
   "scripts": {
